@@ -8,18 +8,17 @@ ADMINS = (
     # ('Your Name', 'your_email@example.com'),
 )
 
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.',
-        'NAME': '',
-        'USER': '',
-        'PASSWORD': '',
-        'HOST': '',
-        'PORT': '',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -157,5 +156,5 @@ LOGGING = {
 # MPD Specific Settings
 #####################################################
 
-MPD_CLIENT_HOST = '127.0.0.1'
+MPD_CLIENT_HOST = '192.168.0.14'
 MPD_CLIENT_PORT = 6600

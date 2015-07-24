@@ -1,4 +1,4 @@
-def formatTime(tim):
+def formatTime(time):
     time = int(time)
     seconds = time % 60
     minutes = time / 60
